@@ -68,7 +68,7 @@ class _LoginScreenState extends State<LoginScreen> {
                     height: 24.0,
                   ),
                   MainBtn(
-                    color: Colors.lightBlueAccent,
+                    color: Color(0xff65799B),
                     text: 'Log In',
                     onPressed: () async {
                       print(email);

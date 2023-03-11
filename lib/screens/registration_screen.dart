@@ -74,7 +74,7 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
               height: 24.0,
             ),
             MainBtn(
-              color: Colors.blueAccent,
+              color: Color(0xff555273),
               text: 'Register',
               onPressed: () async {
                 print(email);

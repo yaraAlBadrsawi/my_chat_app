@@ -19,17 +19,17 @@ class _WelcomeScreenState extends State<WelcomeScreen>
   late Animation animation;
   @override
   void initState() {
-    FirebaseAuth.instance.authStateChanges().listen((user) {
-      if (user != null) {
-        Navigator.pushNamedAndRemoveUntil(
-            context, ChatScreen.id, (route) => false);
-      }
-    });
+    // FirebaseAuth.instance.authStateChanges().listen((user) {
+    //   // if (user != null) {
+    //   //   Navigator.pushNamedAndRemoveUntil(
+    //   //       context, ChatScreen.id, (route) => false);
+    //   // }
+    // });
     controller = AnimationController(vsync: this, duration: duration);
 
     controller.forward();
-    animation =
-        ColorTween(begin: Colors.grey, end: Colors.white).animate(controller);
+    animation = ColorTween(begin: Color(0xff65799B), end: Color(0xffB6D5E1))
+        .animate(controller);
     animation.addListener(() {
       setState(() {});
     });
@@ -81,14 +81,14 @@ class _WelcomeScreenState extends State<WelcomeScreen>
               height: 48.0,
             ),
             MainBtn(
-              color: Colors.lightBlueAccent,
+              color: Color(0xff555273),
               text: 'Log In',
               onPressed: () {
                 Navigator.pushNamed(context, LoginScreen.id);
               },
             ),
             MainBtn(
-              color: Colors.blueAccent,
+              color: Color(0xff555273),
               text: 'Register',
               onPressed: () {
                 Navigator.pushNamed(context, RegistrationScreen.id);
